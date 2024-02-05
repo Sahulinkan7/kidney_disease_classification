@@ -11,4 +11,6 @@ class TrainingPipelineConfig:
 @dataclass
 class DataIngestionConfig:
     root_dir : Path = os.path.join(TrainingPipelineConfig.root_dir,"data_ingestion")
-    
+    data_download_url : str = f"https://drive.google.com/file/d/1zfrUjGq7pk7JrFMVhfdVdz2As1uYqX3q/view?usp=sharing"
+    downloaded_data_filepath : Path = os.path.join(root_dir,"downloaded_data","data.zip")
+    extracted_data_filepath : Path = os.path.join(root_dir,"extracted_data")

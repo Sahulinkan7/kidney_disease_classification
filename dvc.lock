@@ -5,5 +5,16 @@ stages:
     deps:
     - path: src/pipeline/data_ingestion_pipeline.py
       hash: md5
-      md5: 6f6adc0fdf4af30de5080a26660a7f87
-      size: 239
+      md5: 48317059033b90772697fd010a8d4d58
+      size: 1348
+    outs:
+    - path: artifacts/data_ingestion/downloaded_data
+      hash: md5
+      md5: dcfc25ca2e2b3f5ce0e37c5cdf23cc53.dir
+      size: 57713952
+      nfiles: 1
+    - path: artifacts/data_ingestion/extracted_data
+      hash: md5
+      md5: ee005494770f95e5514d401df54c7734.dir
+      size: 58936381
+      nfiles: 465

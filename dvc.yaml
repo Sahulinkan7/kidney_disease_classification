@@ -3,3 +3,6 @@ stages:
     cmd: python src/pipeline/data_ingestion_pipeline.py
     deps:
       - src/pipeline/data_ingestion_pipeline.py
+    outs:
+      - artifacts/data_ingestion/downloaded_data
+      - artifacts/data_ingestion/extracted_data
