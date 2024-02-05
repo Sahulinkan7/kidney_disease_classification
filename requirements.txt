@@ -3,5 +3,6 @@ numpy
 #tensorflow
 pyYAML
 notebook
+dvc
 
 -e .
