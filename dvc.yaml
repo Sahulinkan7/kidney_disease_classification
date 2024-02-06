@@ -13,3 +13,10 @@ stages:
       - src/pipeline/prepare_base_model_pipeline.py
     outs:
       - artifacts/prepared_basemodel/base_model
+
+  training_model:
+    cmd: python src/pipeline/model_training_pipeline.py
+    deps:
+      - src/pipeline/model_training_pipeline.py
+    outs:
+      - artifacts/model_trainer/trained_model

@@ -5,5 +5,7 @@ pyYAML
 notebook
 dvc
 gdown
+scipy
+pillow
 
 -e .

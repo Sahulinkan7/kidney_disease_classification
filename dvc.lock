@@ -31,3 +31,16 @@ stages:
       md5: 26adcb75bb44287761bb4c48314e0d9e.dir
       size: 58921912
       nfiles: 1
+  training_model:
+    cmd: python src/pipeline/model_training_pipeline.py
+    deps:
+    - path: src/pipeline/model_training_pipeline.py
+      hash: md5
+      md5: 57666f5d94f79a6e67bbd857dfa2f396
+      size: 1269
+    outs:
+    - path: artifacts/model_trainer/trained_model
+      hash: md5
+      md5: 7d64a5e4440d67523e0e472b82d7cb9a.dir
+      size: 59340720
+      nfiles: 1

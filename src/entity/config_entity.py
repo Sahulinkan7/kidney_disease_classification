@@ -29,3 +29,15 @@ class PrepareBaseModelConfig:
     params_classes= params_config['CLASSES']
     params_learning_rate = params_config['LEARNING_RATE']
     
+    
+@dataclass(frozen=True)
+class ModeltrainerConfig:
+    root_dir: Path = os.path.join(TrainingPipelineConfig.root_dir,"model_trainer")
+    trained_model_filepath : Path = os.path.join(root_dir,"trained_model","trainedmodel.h5")
+    updated_basemodel_filepath : Path = PrepareBaseModelConfig.updated_base_model_filepath
+    training_data : Path = DataIngestionConfig.extracted_data_filepath
+    params_epochs : int = params_config["EPOCHS"]
+    params_batch_size : int = params_config['BATCH_SIZE']
+    params_is_augmentation: bool = params_config['AUGMENTATION']
+    params_image_size = params_config['IMAGE_SIZE']
+    
