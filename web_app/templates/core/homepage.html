@@ -1,0 +1,35 @@
+{% extends "core/base.html" %}
+
+
+{% block content %}
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-title bg-dark m-2">
+                    <p class="text-center text-white pt-2">Upload kidney CT-scan image</p>
+                </div>
+                <div class="card-body">
+                    
+                    <form action="" method="post" enctype="multipart/form-data" novalidate>
+                        {% csrf_token %}
+                        {% for field in form %}
+                            {{field.label_tag}} <span class="errors">{{field.errors|striptags}}</span>
+                            {{field}}
+                        {% endfor %}
+                        <input type="submit" value="Upload Image" class="btn btn-dark form-control mt-4">
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% if image %}
+            <div class="col-md-6">
+                <div class="text-center">
+                    <img src="{{ image.image.url }}" alt="" height="300px">
+                </div>
+                
+            </div>
+        {% endif %}
+        
+    </div>
+{% endblock content %}
+

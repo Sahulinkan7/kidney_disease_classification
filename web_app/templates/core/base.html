@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/core.css' %}">
+    <title>Kidney disease classification</title>
+</head>
+<body>
+    <div class="container-fluid bg-success">
+        <div class="container bg-gradient p-2 shadow">
+            <h3 class="text-center text-white">Kidney disease classification</h3>
+        </div>
+        
+        <div class="container mt-4">
+            {% if messages %}           
+                {% for message in messages %}
+                    <div class="alert alert-primary alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                        {{message}}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}             
+            {% endif %}
+            {% block content %}
+    
+    
+            {% endblock content %}
+        </div>
+        
+    </div>
+    <script src="{% static 'core/js/jquery.js' %}"></script>
+    <script src="{% static 'core/js/bootstrap.min.js' %}"></script>
+</body>
+</html>
