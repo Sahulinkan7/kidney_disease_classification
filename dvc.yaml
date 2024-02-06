@@ -6,3 +6,10 @@ stages:
     outs:
       - artifacts/data_ingestion/downloaded_data
       - artifacts/data_ingestion/extracted_data
+
+  prepare_base_model:
+    cmd: python src/pipeline/prepare_base_model_pipeline.py
+    deps:
+      - src/pipeline/prepare_base_model_pipeline.py
+    outs:
+      - artifacts/prepared_basemodel/base_model

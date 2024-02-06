@@ -18,3 +18,16 @@ stages:
       md5: ee005494770f95e5514d401df54c7734.dir
       size: 58936381
       nfiles: 465
+  prepare_base_model:
+    cmd: python src/pipeline/prepare_base_model_pipeline.py
+    deps:
+    - path: src/pipeline/prepare_base_model_pipeline.py
+      hash: md5
+      md5: 0dbf6d935781520d4e2eb125533b1ce3
+      size: 1155
+    outs:
+    - path: artifacts/prepared_basemodel/base_model
+      hash: md5
+      md5: 26adcb75bb44287761bb4c48314e0d9e.dir
+      size: 58921912
+      nfiles: 1
