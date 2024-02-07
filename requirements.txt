@@ -7,6 +7,6 @@ dvc
 gdown
 scipy
 pillow
-django==5.0.1
+django
 
 -e .

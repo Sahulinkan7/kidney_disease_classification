@@ -41,6 +41,6 @@ stages:
     outs:
     - path: artifacts/model_trainer/trained_model
       hash: md5
-      md5: 24f629e4b21145ba212124a76e1c9b5b.dir
+      md5: d414ed989545958b67c12925b8a97457.dir
       size: 59340720
       nfiles: 1
