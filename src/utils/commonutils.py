@@ -3,7 +3,7 @@ from src.logger import logging
 from src.exception import CustomException
 from pathlib import Path
 import yaml
-
+import base64
 
 def read_yaml(file_path: Path) -> dict:
     try:
@@ -38,3 +38,10 @@ def write_yaml(file_path: str, content: dict) -> None:
     except Exception as e:
         logging.error(f"writing yaml file interrupted due to {CustomException(e,sys)}")
         raise CustomException(e, sys)
+    
+    
+def decodeImage(imgstring, fileName):
+    imgdata = base64.b64decode(imgstring)
+    with open(fileName, 'wb') as f:
+        f.write(imgdata)
+        f.close()

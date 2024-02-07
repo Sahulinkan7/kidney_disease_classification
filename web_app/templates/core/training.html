@@ -1,0 +1,12 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+
+<p class="text-center text-dark">want to Train this model once again ? </p>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Start Training" class="form-control bg-dark text-white">
+</form>
+
+{% endblock content %}
